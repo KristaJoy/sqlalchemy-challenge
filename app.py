@@ -22,6 +22,7 @@ app = Flask(__name__)
 
 # Create Flask routes
 
+# Home with routes
 @app.route("/")
 def home():
     return (
@@ -31,8 +32,8 @@ def home():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/start_date<br/>"
-        f"/api/v1.0/startend_date"
+        f"/api/v1.0/start_date/yyyy-mm-dd<br/>"
+        f"/api/v1.0/startend_date/yyyy-mm-dd/yyyy-mm-dd"
     )
 
 # list all precipitation
@@ -63,6 +64,7 @@ def tobs():
     session.close()
     return(jsonify(year_temp_data))
 
+# list average, max, min from a start date until now
 @app.route("/api/v1.0/start_date/<start_date>")
 def start_date(start_date):
     session = Session(engine)
@@ -73,7 +75,8 @@ def start_date(start_date):
     temp_dict = {"average_temp": temp_data[0][0], "min_temp": temp_data[0][1], "max_temp": temp_data[0][2]}
     
     return(jsonify(temp_dict))
-    
+
+# list average, max, min from a start date until and end date
 @app.route("/api/v1.0/startend_date/<start_date>/<end_date>")
 def startend_date(start_date, end_date):
     session = Session(engine)
