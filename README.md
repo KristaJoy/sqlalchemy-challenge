@@ -6,7 +6,7 @@ First, connected to the hawaii.squlite database using SQLAlchemy to start a sess
 
 Then found the most recent date in the data and calculated the 12 preceding months of data to plot the percipitation values.
 **Precipitation Analysis**
-![Precipitation over a 1-year period.](https://github.com/KristaJoy/sqlalchemy-challenge/blob/main/Images/yearofrain.png){:height="50%" width="50%"}
+![Precipitation over a 1-year period.](https://github.com/KristaJoy/sqlalchemy-challenge/blob/main/Images/yearofrain.pngs | width=100px)
 
 Next, I queried the total number of weather stations in the dataset and found which station was the most active. Using that station's data I found the temperature data and plotted it into a histogram with 12 bins to see how the temperature observation data (TOBS) was grouped.
 
