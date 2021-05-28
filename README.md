@@ -35,7 +35,7 @@ I plotted the average temperature and it's yerror.
 
 Looks like really nice weather!
 
-I also calculated the daily rainfall average. Finding that I'd most like to stay out of the rain near the weather stations in Pearl City or Waikiki, as they had the least rain.
+I also calculated the daily rainfall average. Finding that I'd most like to stay out of the rain near the weather stations in Pearl City or Waikiki, as they had the least amount of rainfall.
 
 Finally, I calculated the daily temperature normals for the week of my trip. I created an area plot of the high, low, and average temps over the first week in August.
 
